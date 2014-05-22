@@ -1,0 +1,26 @@
+#ifndef DialogoSuperConfiguracion_H
+#define DialogoSuperConfiguracion_H
+
+#include <QDialog>
+
+#include "ui_dialogoSuperConfiguracion.h"
+#include "configuracion.h"
+
+class DialogoSuperConfiguracion : public QDialog, public Ui::DialogoSuperConfiguracion
+{
+	Q_OBJECT
+
+	public:
+	    DialogoSuperConfiguracion(QWidget *parent = 0);
+	    Configuracion *configuracion;
+	    void cambiaVidasJugador(int);
+
+	public slots:
+		void cambiarSolidez();
+		void controlarClickRaton();
+		void cambiarIntervalo();
+		void on_spinBoxVidas_valueChanged(int);
+		void on_sliderGravedad_valueChanged(int gravedad);
+};
+
+#endif

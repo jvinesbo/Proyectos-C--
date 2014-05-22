@@ -1,0 +1,25 @@
+#ifndef MODELO_TABLA_H
+#define MODELO_TABLA_H
+
+#include <QAbstractTableModel>
+#include <QVector>
+#include "bola.h"
+
+
+class ModeloTabla : public QAbstractTableModel{
+
+	Q_OBJECT
+
+	public:
+	    	ModeloTabla(QVector<Bola> *pABolas);
+		int rowCount(const QModelIndex & parent = QModelIndex()) const;
+		int columnCount(const QModelIndex & parent = QModelIndex()) const;
+		QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const;
+		QVector<Bola> *bolas;
+
+
+	public slots:
+
+};
+
+#endif

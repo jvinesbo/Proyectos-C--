@@ -1,0 +1,7 @@
+#include "bola.h"
+
+Bola::Bola(){}
+
+Bola::Bola(float posX,float posY,float velX,float velY){
+
+}

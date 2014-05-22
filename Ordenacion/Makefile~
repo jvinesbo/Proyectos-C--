@@ -1,0 +1,2 @@
+Programa: ordenar.c++	
+	g++ -o Programa ordenar.c++
